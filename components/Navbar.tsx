@@ -8,10 +8,10 @@ const Navbar = () => {
 				<Link className="logo" href={"/"} title="Adamsco Sales Agency">
 					<Image
 						alt="logo"
-						className="bg-gray-800/65 rounded-4xl"
+						className="bg-gray-800/70 rounded-4xl"
 						src={"/images/adamsco-logo-2.png"}
-						width={38}
-						height={38}
+						width={34}
+						height={34}
 					/>
 					<p>Adamsco Agency</p>
 				</Link>
