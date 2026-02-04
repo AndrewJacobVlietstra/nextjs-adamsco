@@ -7,12 +7,13 @@ const Navbar = () => {
 			<nav>
 				<Link className="logo" href={"/"} title="Adamsco Sales Agency">
 					<Image
-						src={"/images/adamsco-logo.png"}
 						alt="logo"
-						width={45}
-						height={45}
+						className="bg-gray-800/65 rounded-4xl"
+						src={"/images/adamsco-logo-2.png"}
+						width={38}
+						height={38}
 					/>
-					<p>Adamsco Sales Agency</p>
+					<p>Adamsco Agency</p>
 				</Link>
 
 				<ul>
