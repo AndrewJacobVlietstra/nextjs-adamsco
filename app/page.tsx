@@ -1,7 +1,18 @@
+import HeroBackground from "@/components/HeroBackground";
+import HeroHeader from "@/components/HeroHeader";
+
 export default function HomePage() {
 	return (
-		<div className="min-h-screen">
-			<h1>Home Page</h1>
-		</div>
+		<>
+			<HeroBackground />
+
+			<section>
+				<div className="relative min-h-screen">
+					<HeroHeader />
+				</div>
+			</section>
+
+			<section>Home page content</section>
+		</>
 	);
 }

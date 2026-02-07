@@ -3,7 +3,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: Arial, serif;
 
 	--color-blue: #94eaff;
 	--color-light-100: #e7f2ff;
@@ -18,7 +18,7 @@
 	--card-foreground: oklch(0.145 0 0);
 	--popover: oklch(1 0 0);
 	--popover-foreground: oklch(0.145 0 0);
-	--primary: #59deca;
+	--primary: maroon;
 	--primary-foreground: oklch(0.985 0 0);
 	--secondary: oklch(0.97 0 0);
 	--secondary-foreground: oklch(0.205 0 0);
@@ -55,8 +55,7 @@
 	--color-border-dark: var(--color-border-dark);
 	--color-dark-100: var(--color-dark-100);
 	--color-dark-200: var(--color-dark-200);
-	--font-schibsted-grotesk: var(--font-schibsted-grotesk);
-	--font-martian-mono: var(--font-martian-mono);
+	--font-lato: var(--font-lato);
 	--color-sidebar-ring: var(--sidebar-ring);
 	--color-sidebar-border: var(--sidebar-border);
 	--color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -122,7 +121,7 @@
 	}
 
 	h1 {
-		@apply font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl;
+		@apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl;
 	}
 
 	h3 {
@@ -136,7 +135,7 @@
 
 @layer components {
 	header {
-		@apply glass sticky top-0 z-10;
+		@apply glass rounded-none sticky top-0 z-10;
 
 		nav {
 			@apply flex flex-row justify-between mx-auto container sm:px-10 px-5 py-4;
@@ -145,17 +144,41 @@
 				@apply flex flex-row items-center gap-5;
 
 				a {
-					@apply border-b border-transparent hover:border-primary transition-colors duration-250;
+					@apply border-b border-transparent hover:border-primary-foreground/90 transition-colors duration-250;
 				}
 			}
 		}
 
 		.logo {
-			@apply flex flex-row items-end gap-3;
+			@apply flex flex-row gap-3;
 
 			p {
 				@apply text-xl font-bold italic max-sm:hidden;
 			}
 		}
+	}
+
+	.hero-bg {
+		position: absolute;
+		top: 70px;
+		left: 0px;
+		height: 100vh;
+		width: 100%;
+		background-image: url("/images/man-in-suit-bowtie.jpg");
+		background-attachment: fixed; /* The key property for the parallax effect */
+		background-color: #222; /* Used if the image is unavailable */
+		background-position: top;
+		background-repeat: no-repeat;
+		background-size: cover;
+		object-fit: cover;
+		filter: brightness(0.52);
+	}
+
+	.hero-header {
+		position: relative;
+		top: 33vh;
+		text-transform: uppercase;
+		text-shadow: 5px 5px 4px #030708;
+		letter-spacing: 0.4rem;
 	}
 }

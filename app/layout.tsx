@@ -1,15 +1,11 @@
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Lato } from "next/font/google";
 import type { Metadata } from "next";
 
-const geistSans = Geist({
-	variable: "--font-geist-sans",
-	subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-	variable: "--font-geist-mono",
+const lato = Lato({
+	variable: "--font-lato",
+	weight: ["100", "300", "400", "700", "900"],
 	subsets: ["latin"],
 });
 
@@ -27,9 +23,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-			>
+			<body className={`${lato.variable} antialiased relative`}>
 				<Navbar />
 				<main>{children}</main>
 			</body>
