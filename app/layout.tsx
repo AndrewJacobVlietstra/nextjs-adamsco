@@ -10,7 +10,7 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-	title: "Adams Co Sales Agency",
+	title: "Adamsco Sales Agency",
 	description:
 		"Adamsco Sales Agency is a family owned fashion wholesale business with over 40 years of experience proudly serving the Canadian market.",
 	keywords: ["adamsco", "sales", "agency", "business", "family", "canadian"],
@@ -23,7 +23,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${lato.variable} antialiased relative`}>
+			<body
+				className={`${lato.variable} antialiased relative overflow-x-hidden`}
+			>
 				<Navbar />
 				<main>{children}</main>
 			</body>

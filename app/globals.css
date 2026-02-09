@@ -117,11 +117,11 @@
 	}
 
 	main {
-		@apply mx-auto container flex flex-col sm:px-10 px-5 py-10;
+		@apply mx-auto container flex flex-col sm:px-10 px-5;
 	}
 
 	h1 {
-		@apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl;
+		@apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-[0.55rem] uppercase;
 	}
 
 	h3 {
@@ -144,7 +144,7 @@
 				@apply flex flex-row items-center gap-5;
 
 				a {
-					@apply border-b border-transparent hover:border-primary-foreground/90 transition-colors duration-250;
+					@apply border-b border-transparent hover:border-primary-foreground/60 transition-colors duration-250;
 				}
 			}
 		}
@@ -158,27 +158,92 @@
 		}
 	}
 
+	.homepage-hero-container {
+		height: calc(100vh - 70px);
+	}
+
 	.hero-bg {
 		position: absolute;
 		top: 70px;
 		left: 0px;
-		height: 100vh;
+		height: calc(100vh - 70px);
 		width: 100%;
 		background-image: url("/images/man-in-suit-bowtie.jpg");
-		background-attachment: fixed; /* The key property for the parallax effect */
 		background-color: #222; /* Used if the image is unavailable */
-		background-position: top;
+		background-attachment: fixed;
+		background-position: center top;
 		background-repeat: no-repeat;
 		background-size: cover;
 		object-fit: cover;
-		filter: brightness(0.52);
+		filter: brightness(0.5);
+		z-index: -1;
 	}
 
 	.hero-header {
 		position: relative;
-		top: 33vh;
-		text-transform: uppercase;
-		text-shadow: 5px 5px 4px #030708;
+		top: 32vh;
+		text-shadow: 4px 4px 6px var(--background);
 		letter-spacing: 0.4rem;
 	}
+	.hero-btn {
+		cursor: pointer;
+		text-shadow: none;
+	}
+
+	.homepage-intro-container {
+		min-height: fit-content;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.homepage-content-container {
+		min-height: 50vh;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0%;
+	}
+	100% {
+		opacity: 100%;
+	}
+}
+
+@keyframes parallax-bg {
+	from {
+		background-position: center top;
+	}
+	to {
+		background-position: center bottom;
+	}
+}
+
+@keyframes zoomInfadeIn {
+	0% {
+		opacity: 0%;
+		transform: scale(0.94);
+	}
+	100% {
+		opacity: 100%;
+		transform: scale(1);
+	}
+}
+
+.animate-zoomIn-fadeIn {
+	animation: zoomInfadeIn 1.5s ease-in-out forwards 0.6s;
+}
+
+.animate-parallax-bg {
+	animation: parallax-bg linear forwards;
+	animation-timeline: scroll();
+}
+
+.animate-fadeIn-parallax {
+	animation:
+		fadeIn 1.8s ease-in-out forwards,
+		parallax-bg linear forwards;
+
+	animation-timeline: auto, scroll();
 }
