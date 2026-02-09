@@ -1,7 +1,7 @@
-import HeroBackground from "@/components/HeroBackground";
-import HeroHeader from "@/components/HeroHeader";
-import HomePageContent from "@/components/HomePageContent";
-import HomePageIntro from "@/components/HomePageIntro";
+import HeroBackground from "@/components/home/HeroBackground";
+import HeroHeader from "@/components/home/HeroHeader";
+import HomePageContent from "@/components/home/HomePageContent";
+import HomePageIntro from "@/components/home/HomePageIntro";
 
 export default function HomePage() {
 	return (

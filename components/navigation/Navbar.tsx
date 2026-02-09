@@ -1,5 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import NavLinks from "@/components/navigation/NavLinks";
+import MobileNav from "./MobileNav";
+import DesktopNav from "./DesktopNav";
 
 const Navbar = () => {
 	return (
@@ -17,14 +20,13 @@ const Navbar = () => {
 					/>
 				</Link>
 
-				<ul className="font-sans uppercase">
-					<Link href={"/"}>Home</Link>
-					<Link href={"/brands"}>Brands</Link>
-					<Link href={"/about-us"}>About Us</Link>
-					<Link href={"/sales"}>Sales</Link>
-					<Link href={"/follow"}>Follow</Link>
-					<Link href={"/contact"}>Contact</Link>
-				</ul>
+				<DesktopNav className="hidden md:flex font-sans uppercase">
+					<NavLinks />
+				</DesktopNav>
+
+				<MobileNav className="hidden max-md:flex">
+					<NavLinks />
+				</MobileNav>
 			</nav>
 		</header>
 	);
