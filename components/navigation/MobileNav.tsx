@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { LucideMenu } from "lucide-react";
+import { LucideMenu, LucideX } from "lucide-react";
 import { ReactNode, useState } from "react";
 import { useClickOutside } from "@/lib/hooks";
 
@@ -22,13 +22,17 @@ export default function MobileNav({ children, className }: MobileNavProps) {
 				onClick={() => setIsActive((prev) => !prev)}
 				variant={"outline"}
 			>
-				<LucideMenu />
+				{isActive ? (
+					<LucideX className="size-5" />
+				) : (
+					<LucideMenu className="size-5" />
+				)}
 			</Button>
 
 			{isActive ? (
 				<ul
 					className={`mobile-nav-dropdown ${isActive ? "animate-growIn" : ""}`}
-					onClick={() => setIsActive(() => false)}
+					onClick={() => setIsActive(false)}
 				>
 					{children}
 				</ul>

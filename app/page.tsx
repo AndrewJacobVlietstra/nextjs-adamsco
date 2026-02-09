@@ -7,7 +7,7 @@ export default function HomePage() {
 	return (
 		<>
 			<section className="homepage-hero-container">
-				<HeroBackground className="animate-fadeIn-parallax" />
+				<HeroBackground className="animate-parallax-bg" />
 				<HeroHeader className="opacity-0 animate-zoomIn-fadeIn" />
 			</section>
 
