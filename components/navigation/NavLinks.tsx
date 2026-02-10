@@ -1,14 +1,23 @@
+"use client";
+
 import Link from "next/link";
+import { links } from "@/lib/constants";
+import { usePathname } from "next/navigation";
 
 const NavLinks = () => {
+	const pathname = usePathname();
+
 	return (
 		<>
-			<Link href={"/"}>Home</Link>
-			<Link href={"/brands"}>Brands</Link>
-			<Link href={"/about-us"}>About Us</Link>
-			<Link href={"/sales"}>Sales</Link>
-			<Link href={"/follow"}>Follow</Link>
-			<Link href={"/contact"}>Contact</Link>
+			{links.map(({ content, href }) => (
+				<Link
+					className={`${pathname === href ? "text-slate-400 brightness-120" : ""}`}
+					href={href}
+					key={content}
+				>
+					{content}
+				</Link>
+			))}
 		</>
 	);
 };
