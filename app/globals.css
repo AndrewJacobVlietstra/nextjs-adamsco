@@ -158,6 +158,20 @@
 		}
 	}
 
+	footer {
+		@apply w-full bg-slate-900/40;
+
+		nav {
+			@apply mx-auto container sm:px-10 px-5 py-6;
+		}
+
+		.footer-icon {
+			cursor: pointer;
+			transition-property: color;
+			transition-duration: 200ms;
+		}
+	}
+
 	.homepage-hero-container {
 		height: calc(100vh - 70px);
 	}
