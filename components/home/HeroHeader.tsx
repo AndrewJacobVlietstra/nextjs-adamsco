@@ -16,13 +16,13 @@ const HeroHeader = ({ className }: HeroHeaderProps) => {
 		>
 			<p>Wholesale</p>
 
-			<div className="font-lato flex flex-col items-center gap-4">
+			<div className="font-lato flex flex-col items-center text-center gap-4">
 				<h1>Adamsco Sales</h1>
 				<h1>Agency</h1>
 			</div>
 
-			<Button asChild className="hero-btn" variant="outline">
-				<Link href={"/brands"}>View Collections</Link>
+			<Button asChild className="hero-btn pl-5" variant="outline">
+				<Link href={"/brands"}>View Brands</Link>
 			</Button>
 		</div>
 	);

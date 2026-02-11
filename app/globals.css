@@ -43,6 +43,7 @@
 	--sidebar-accent-foreground: oklch(0.205 0 0);
 	--sidebar-border: oklch(0.922 0 0);
 	--sidebar-ring: oklch(0.708 0 0);
+	--navbar-height: 70px;
 	scroll-behavior: smooth;
 }
 
@@ -138,7 +139,7 @@
 		@apply glass rounded-none sticky top-0 z-10;
 
 		nav {
-			@apply flex flex-row justify-between mx-auto container sm:px-10 px-5 py-4;
+			@apply h-(--navbar-height) flex flex-row justify-between mx-auto container sm:px-10 px-5 py-4;
 
 			ul {
 				@apply flex flex-row items-center gap-5;
@@ -146,6 +147,26 @@
 				a {
 					@apply border-b border-transparent hover:border-slate-400 transition-colors duration-220;
 				}
+			}
+		}
+
+		.mobile-nav-dropdown {
+			position: absolute;
+			top: var(--navbar-height);
+			left: 0rem;
+
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: start;
+
+			height: fit-content;
+			width: 0%;
+
+			@apply gap-0 bg-background;
+
+			a {
+				@apply border-b-0 uppercase w-full px-6 py-3 hover:bg-slate-900 active:bg-slate-900 focus:bg-slate-900;
 			}
 		}
 
@@ -158,29 +179,18 @@
 		}
 	}
 
-	footer {
-		@apply w-full bg-slate-900/40;
-
-		nav {
-			@apply mx-auto container sm:px-10 px-5 py-6;
-		}
-
-		.footer-icon {
-			cursor: pointer;
-			transition-property: color;
-			transition-duration: 200ms;
-		}
-	}
-
 	.homepage-hero-container {
-		height: calc(100vh - 70px);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: calc(100vh - var(--navbar-height));
 	}
 
 	.hero-bg {
 		position: absolute;
-		top: 70px;
+		top: var(--navbar-height);
 		left: 0px;
-		height: calc(100vh - 70px);
+		height: calc(100vh - var(--navbar-height));
 		width: 100%;
 		background-image: url("/images/man-in-suit-bowtie.jpg");
 		background-color: #222; /* Used if the image is unavailable */
@@ -194,8 +204,6 @@
 	}
 
 	.hero-header {
-		position: relative;
-		top: 32vh;
 		text-shadow: 4px 4px 6px var(--background);
 		letter-spacing: 0.4rem;
 	}
@@ -205,33 +213,70 @@
 	}
 
 	.homepage-intro-container {
-		min-height: fit-content;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		min-height: fit-content;
 	}
 
 	.homepage-content-container {
-		min-height: 50vh;
-	}
-
-	.mobile-nav-dropdown {
-		position: absolute;
-		top: 70px;
-		left: 0rem;
-
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		align-items: start;
+		align-items: center;
+		min-height: fit-content;
+	}
 
-		height: fit-content;
-		width: 0%;
+	.brands-container {
+		@apply grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-8 lg:gap-10 xl:gap-12;
+	}
 
-		@apply gap-0 bg-background;
+	.brand-image-container {
+		@apply relative;
+	}
 
-		a {
-			@apply border-b-0 uppercase w-full px-6 py-3 hover:bg-slate-900 active:bg-slate-900 focus:bg-slate-900;
+	.brand-link-container {
+		@apply active:text-slate-400 focus:text-slate-400 hover:text-slate-400;
+
+		p {
+			@apply transition-colors duration-200;
+		}
+	}
+
+	/* These dimensions should match the next image's */
+	.brand-primary-img,
+	.brand-secondary-img {
+		@apply h-175 md:h-140 lg:h-160 xl:h-175 object-cover;
+	}
+
+	.brand-primary-img {
+		opacity: 1;
+	}
+
+	.brand-secondary-img {
+		position: absolute; /* Hover image sits on top of the default image */
+		top: 0;
+		left: 0;
+		opacity: 0; /* Initially hide the hover image */
+		height: 100%; /* Will take up same height as primary img  */
+		transition: all 0.2s;
+	}
+
+	.brand-link-container:focus .brand-secondary-img,
+	.brand-link-container:hover .brand-secondary-img {
+		opacity: 1; /* Show the secondary image on container hover */
+	}
+
+	footer {
+		@apply w-full bg-slate-900/40;
+
+		nav {
+			@apply mx-auto container sm:px-10 px-5 py-8;
+		}
+
+		.footer-icon {
+			transition-property: color;
+			transition-duration: 200ms;
 		}
 	}
 }
