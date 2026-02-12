@@ -10,7 +10,7 @@ const HomePageContent = () => {
 				{brands
 					.sort((a, b) => a.brandName.localeCompare(b.brandName))
 					.map((brand) => (
-						<li key={brand.brandName}>
+						<li className={brand.name} key={brand.brandName}>
 							<BrandImage {...brand} />
 						</li>
 					))}

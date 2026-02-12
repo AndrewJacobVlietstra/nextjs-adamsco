@@ -4,7 +4,7 @@ import Link from "next/link";
 const NavLogo = () => {
 	return (
 		<Link
-			className="logo rounded-4xl hover:bg-slate-700/90 transition-colors duration-200"
+			className="logo rounded-4xl hover:bg-slate-700/80 transition-colors duration-200"
 			href={"/"}
 		>
 			<Image

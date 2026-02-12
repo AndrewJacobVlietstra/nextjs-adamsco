@@ -228,11 +228,7 @@
 	}
 
 	.brands-container {
-		@apply grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-8 lg:gap-10 xl:gap-12;
-	}
-
-	.brand-image-container {
-		@apply relative;
+		@apply grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-14 md:gap-8 lg:gap-10 brightness-94;
 	}
 
 	.brand-link-container {
@@ -241,6 +237,10 @@
 		p {
 			@apply transition-colors duration-200;
 		}
+	}
+
+	.brand-image-container {
+		@apply relative;
 	}
 
 	/* These dimensions should match the next image's */
@@ -254,17 +254,65 @@
 	}
 
 	.brand-secondary-img {
-		position: absolute; /* Hover image sits on top of the default image */
+		position: absolute; /* Secondary image sits on top of the primary image */
 		top: 0;
 		left: 0;
-		opacity: 0; /* Initially hide the hover image */
-		height: 100%; /* Will take up same height as primary img  */
+		opacity: 0; /* Initially hide the secondary image */
+		height: 100%; /* Secondary image height must equal primary image, prevents overlap  */
 		transition: all 0.2s;
 	}
 
 	.brand-link-container:focus .brand-secondary-img,
 	.brand-link-container:hover .brand-secondary-img {
-		opacity: 1; /* Show the secondary image on container hover */
+		opacity: 1; /* Show the secondary image on container focus/hover */
+	}
+
+	.white-stuff-brand-img {
+		@apply 2xl:col-start-2 2xl:col-end-3;
+	}
+
+	.brandpage-logos-container {
+		min-height: calc(100vh - var(--navbar-height));
+	}
+
+	.logos-container {
+		@apply grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 justify-items-center brightness-90;
+	}
+
+	.logo-link {
+		background-color: white;
+	}
+
+	.logo-link img {
+		transition: all ease-in-out 0.25s;
+	}
+
+	.logo-link:hover img {
+		transform: scale(0.9);
+	}
+
+	.fidelity-brand-logo img,
+	.mos-mosh-brand-logo img,
+	.saburo-jeans-brand-logo img,
+	.tanta-brand-logo img {
+		@apply relative;
+	}
+
+	.fidelity-brand-logo img {
+		@apply lg:top-4;
+	}
+	.mos-mosh-brand-logo img {
+		@apply lg:top-2 xl:top-3;
+	}
+	.saburo-jeans-brand-logo img {
+		@apply lg:top-10 xl:top-14 2xl:top-18;
+	}
+	.tanta-brand-logo img {
+		@apply xl:top-3;
+	}
+
+	.white-stuff-brand-logo {
+		@apply xl:col-start-2 xl:col-end-3;
 	}
 
 	footer {

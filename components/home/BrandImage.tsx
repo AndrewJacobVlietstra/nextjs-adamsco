@@ -2,17 +2,17 @@ import Image from "next/image";
 import Link from "next/link";
 
 type BrandImageProps = {
-	alt: string;
-	brandName: string;
 	href: string;
+	brandName: string;
+	name: string;
 	primaryImg: string;
 	secondaryImg?: string;
 };
 
 const BrandImage = ({
-	alt,
-	brandName,
 	href,
+	brandName,
+	name,
 	primaryImg,
 	secondaryImg,
 }: BrandImageProps) => {
@@ -20,7 +20,7 @@ const BrandImage = ({
 		<Link className="brand-link-container" href={href}>
 			<div className="brand-image-container">
 				<Image
-					alt={alt}
+					alt={name}
 					className="brand-primary-img"
 					src={primaryImg}
 					height={700}
@@ -28,7 +28,7 @@ const BrandImage = ({
 				/>
 				{secondaryImg && (
 					<Image
-						alt={alt}
+						alt={name}
 						className="brand-secondary-img"
 						src={secondaryImg}
 						height={700}

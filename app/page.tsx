@@ -11,9 +11,8 @@ export const metadata: Metadata = {
 export default function HomePage() {
 	return (
 		<>
-			<HeroBackground className="animate-parallax-bg" />
-
 			<section className="homepage-hero-container">
+				<HeroBackground className="animate-parallax-bg" />
 				<HeroHeader className="opacity-0 animate-zoomIn-fadeIn" />
 			</section>
 

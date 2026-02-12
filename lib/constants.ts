@@ -27,52 +27,90 @@ export const links = [
 
 export const brands = [
 	{
-		alt: "white stuff brand img",
-		brandName: "White Stuff",
 		href: "/",
+		brandName: "White Stuff",
+		name: "white-stuff-brand-img",
 		primaryImg: "/images/brand-1-a.avif",
 		secondaryImg: "/images/brand-1-b.avif",
 	},
 	{
-		alt: "regency brand img",
-		brandName: "Regency",
 		href: "/",
+		brandName: "Regency",
+		name: "regency-brand-img",
 		primaryImg: "/images/brand-2-a.webp",
 		secondaryImg: "/images/brand-2-b.webp",
 	},
 	{
-		alt: "mos mosh brand img",
-		brandName: "Mos Mosh",
 		href: "/",
+		brandName: "Mos Mosh",
+		name: "mos-mosh-brand-img",
 		primaryImg: "/images/brand-3-a.webp",
 		secondaryImg: "/images/brand-3-b.webp",
 	},
 	{
-		alt: "saburo brand img",
-		brandName: "Saburo",
 		href: "/",
+		brandName: "Saburo",
+		name: "saburo-brand-img",
 		primaryImg: "/images/brand-4-a.webp",
 		secondaryImg: "/images/brand-4-b.webp",
 	},
 	{
-		alt: "masutto brand img",
-		brandName: "Masutto",
 		href: "/",
+		brandName: "Masutto",
+		name: "masutto-brand-img",
 		primaryImg: "/images/brand-5-a.webp",
 		secondaryImg: "/images/brand-5-b.webp",
 	},
 	{
-		alt: "fidelity brand img",
-		brandName: "Fidelity",
 		href: "/",
+		brandName: "Fidelity",
+		name: "fidelity-brand-img",
 		primaryImg: "/images/brand-6-a.webp",
 		secondaryImg: "/images/brand-6-b.webp",
 	},
 	{
-		alt: "tantä brand img",
-		brandName: "Tantä",
 		href: "/",
+		brandName: "Tantä",
+		name: "tantä-brand-img",
 		primaryImg: "/images/brand-7-a.webp",
 		secondaryImg: "/images/brand-7-b.webp",
+	},
+];
+
+export const brandLogos = [
+	{
+		href: "/",
+		imgPath: "/images/brand-logo-1.webp",
+		name: "white-stuff-brand-logo",
+	},
+	{
+		href: "/",
+		imgPath: "/images/brand-logo-2.webp",
+		name: "regency-brand-logo",
+	},
+	{
+		href: "/",
+		imgPath: "/images/brand-logo-3.webp",
+		name: "mos-mosh-brand-logo",
+	},
+	{
+		href: "/",
+		imgPath: "/images/brand-logo-4.avif",
+		name: "saburo-jeans-brand-logo",
+	},
+	{
+		href: "/",
+		imgPath: "/images/brand-logo-5.webp",
+		name: "masutto-brand-logo",
+	},
+	{
+		href: "/",
+		imgPath: "/images/brand-logo-6.webp",
+		name: "fidelity-brand-logo",
+	},
+	{
+		href: "/",
+		imgPath: "/images/brand-logo-7.webp",
+		name: "tanta-brand-logo",
 	},
 ];
