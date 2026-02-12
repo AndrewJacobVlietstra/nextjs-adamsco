@@ -8,12 +8,12 @@ export const links = [
 		content: "Brands",
 	},
 	{
-		href: "/about-us",
-		content: "About Us",
-	},
-	{
 		href: "/sales",
 		content: "Sales",
+	},
+	{
+		href: "/about-us",
+		content: "About",
 	},
 	{
 		href: "/follow",

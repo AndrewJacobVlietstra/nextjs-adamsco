@@ -10,10 +10,8 @@ export const metadata: Metadata = {
 const BrandsPage = () => {
 	return (
 		<>
-			<section className="brandpage-intro-container">
-				<div className="flex justify-center my-12">
-					<h1>Brands</h1>
-				</div>
+			<section className="brandpage-intro-container my-(--section-spacing)">
+				<h1 className="flex justify-center">Brands</h1>
 			</section>
 
 			<section className="brandpage-logos-container mb-12">

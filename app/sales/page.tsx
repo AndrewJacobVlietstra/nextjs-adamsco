@@ -5,6 +5,16 @@ export const metadata: Metadata = {
 };
 
 const SalesPage = () => {
-	return <div className="min-h-[90vh] py-4">SalesPage</div>;
+	return (
+		<>
+			<section className="salespage-intro-container my-(--section-spacing)">
+				<h1 className="flex justify-center">Sales</h1>
+			</section>
+
+			<section className="salespage-content-container">
+				<div>Sales Page In Progress!</div>
+			</section>
+		</>
+	);
 };
 export default SalesPage;

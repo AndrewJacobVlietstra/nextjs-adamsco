@@ -5,6 +5,16 @@ export const metadata: Metadata = {
 };
 
 const ContactPage = () => {
-	return <div className="min-h-[90vh] py-4">ContactPage</div>;
+	return (
+		<>
+			<section className="contactpage-intro-container my-(--section-spacing)">
+				<h1 className="flex justify-center">Contact Us</h1>
+			</section>
+
+			<section className="contactpage-content-container">
+				<div>Page Content</div>
+			</section>
+		</>
+	);
 };
 export default ContactPage;

@@ -44,6 +44,7 @@
 	--sidebar-border: oklch(0.922 0 0);
 	--sidebar-ring: oklch(0.708 0 0);
 	--navbar-height: 70px;
+	--section-spacing: 3rem;
 	scroll-behavior: smooth;
 }
 
@@ -126,7 +127,7 @@
 	}
 
 	h3 {
-		@apply text-2xl font-bold;
+		@apply text-2xl font-bold uppercase;
 	}
 
 	ul {
@@ -315,6 +316,45 @@
 		@apply xl:col-start-2 xl:col-end-3;
 	}
 
+	.salespage-content-container {
+		min-height: calc(100vh - var(--navbar-height));
+		text-align: center;
+	}
+
+	.aboutpage-content-container {
+		min-height: calc(100vh - var(--navbar-height));
+		max-width: 960px;
+	}
+
+	.aboutpage-image-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.aboutpage-content {
+		p {
+			@apply mt-4 mb-6 leading-7 tracking-wide;
+		}
+	}
+
+	.followpage-content-container {
+		min-height: calc(100dvh - var(--navbar-height));
+		text-align: center;
+	}
+
+	.followpage-image-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.contactpage-content-container {
+		min-height: calc(100vh - var(--navbar-height));
+		text-align: center;
+	}
+
 	footer {
 		@apply w-full bg-slate-900/40;
 
@@ -378,8 +418,8 @@
 
 .animate-growIn {
 	animation:
-		growIn 0.4s ease forwards,
-		fadeIn 1s ease;
+		growIn 0.5s ease forwards,
+		fadeIn 0.5s ease;
 }
 
 .animate-fadeIn-parallax {
