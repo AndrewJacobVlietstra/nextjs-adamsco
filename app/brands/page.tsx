@@ -18,8 +18,14 @@ const BrandsPage = () => {
 				<div className="logos-container">
 					{brandLogos
 						.sort((a, b) => a.name.localeCompare(b.name))
-						.map(({ href, imgPath, name }) => (
-							<Link className={`logo-link ${name}`} href={href} key={name}>
+						.map(({ href, imgPath, name, title }) => (
+							<Link
+								className={`logo-link ${name}`}
+								href={href}
+								key={name}
+								target="_blank"
+								title={`Visit ${title}'s website, opens in new tab.`}
+							>
 								<Image alt={name} src={imgPath} height={500} width={500} />
 							</Link>
 						))}
