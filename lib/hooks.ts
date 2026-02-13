@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
 
 export const useClickOutside = (handler: () => void) => {
 	const ref = useRef<null | HTMLDivElement>(null);
@@ -21,4 +21,26 @@ export const useClickOutside = (handler: () => void) => {
 	}, [handler]); // Re-run effect if handler changes
 
 	return ref;
+};
+
+export const useLocalStorage = <T>(
+	key: string,
+	initialValue?: T,
+): [T, Dispatch<SetStateAction<T>>] => {
+	// Check if window object exists, avoid server error localStorage not defined
+	const isClient = typeof window !== "undefined";
+
+	const [storedValue, setStoredValue] = useState<T>(() =>
+		isClient
+			? JSON.parse(
+					localStorage.getItem(key) || JSON.stringify(initialValue || ""),
+				)
+			: null,
+	);
+
+	useEffect(() => {
+		localStorage.setItem(key, JSON.stringify(storedValue));
+	}, [key, storedValue]);
+
+	return [storedValue, setStoredValue] as const;
 };

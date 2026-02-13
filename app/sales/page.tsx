@@ -12,7 +12,9 @@ const SalesPage = () => {
 			</section>
 
 			<section className="salespage-content-container">
-				<div>Sales Page In Progress!</div>
+				<p className="flex justify-center text-lg uppercase">
+					Sales Page In Progress!
+				</p>
 			</section>
 		</>
 	);

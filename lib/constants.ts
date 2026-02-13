@@ -79,38 +79,40 @@ export const brands = [
 
 export const brandLogos = [
 	{
-		href: "/",
+		href: "https://www.whitestuff.com/browse/mens",
 		imgPath: "/images/brand-logo-1.webp",
 		name: "white-stuff-brand-logo",
 	},
 	{
-		href: "/",
+		href: "https://www.regencyleathers.com",
 		imgPath: "/images/brand-logo-2.webp",
 		name: "regency-brand-logo",
 	},
 	{
-		href: "/",
+		href: "https://mosmosh.com/pages/home-men",
 		imgPath: "/images/brand-logo-3.webp",
 		name: "mos-mosh-brand-logo",
 	},
 	{
-		href: "/",
+		href: "https://www.saburojeans.com/en-us",
 		imgPath: "/images/brand-logo-4.avif",
 		name: "saburo-jeans-brand-logo",
 	},
 	{
-		href: "/",
+		href: "https://www.masutto.com/en-ca",
 		imgPath: "/images/brand-logo-5.webp",
 		name: "masutto-brand-logo",
 	},
 	{
-		href: "/",
+		href: "https://fidelitydenim.com/collections/fidelity-men",
 		imgPath: "/images/brand-logo-6.webp",
 		name: "fidelity-brand-logo",
 	},
 	{
-		href: "/",
+		href: "https://tantarainwear.com/en",
 		imgPath: "/images/brand-logo-7.webp",
 		name: "tanta-brand-logo",
 	},
 ];
+
+export const BASE_URL = "https://adamscosalesagency.com";

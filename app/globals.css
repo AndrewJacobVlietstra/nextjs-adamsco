@@ -44,8 +44,8 @@
 	--sidebar-border: oklch(0.922 0 0);
 	--sidebar-ring: oklch(0.708 0 0);
 	--navbar-height: 70px;
-	--section-spacing: 3rem;
-	scroll-behavior: smooth;
+	--section-spacing: 4rem;
+	scroll-behavior: auto;
 }
 
 @theme inline {
@@ -318,7 +318,6 @@
 
 	.salespage-content-container {
 		min-height: calc(100vh - var(--navbar-height));
-		text-align: center;
 	}
 
 	.aboutpage-content-container {
@@ -352,7 +351,41 @@
 
 	.contactpage-content-container {
 		min-height: calc(100vh - var(--navbar-height));
-		text-align: center;
+
+		@apply flex flex-col gap-14 mb-10;
+	}
+
+	.contact-form {
+		@apply flex flex-col gap-12 tracking-[0.08em];
+
+		div {
+			@apply relative w-full;
+		}
+
+		label {
+			@apply absolute top-5 left-5 text-lg opacity-70 cursor-text uppercase transition-all duration-250;
+		}
+
+		input,
+		textarea {
+			@apply p-5 border-b border-slate-700 bg-slate-950/90 text-xl w-full transition-colors duration-220 focus:outline-0 focus:border-slate-400 focus:bg-slate-900 hover:border-slate-400 hover:bg-slate-900;
+		}
+	}
+
+	.contact-form input:focus + label,
+	.contact-form textarea:focus + label {
+		opacity: 0;
+		transform: translate(2.5rem, 0rem);
+	}
+
+	.contact-form-error {
+		@apply text-center text-lg text-red-400;
+	}
+
+	.thankyoupage-content-container {
+		min-height: calc(100vh - var(--navbar-height));
+
+		@apply flex flex-col items-center gap-2 text-lg text-center tracking-wider;
 	}
 
 	footer {

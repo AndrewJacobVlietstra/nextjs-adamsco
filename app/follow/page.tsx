@@ -28,6 +28,7 @@ const FollowPage = () => {
 					/>
 					<Image
 						alt="follow us instagram image link"
+						className="border-b-4"
 						src={"/images/follow-us-2.png"}
 						height={695}
 						width={1058}
