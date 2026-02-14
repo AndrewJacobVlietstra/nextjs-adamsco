@@ -195,13 +195,14 @@
 		width: 100%;
 		background-image: url("/images/man-in-suit-bowtie.jpg");
 		background-color: #222; /* Used if the image is unavailable */
-		background-attachment: fixed;
 		background-position: center top;
 		background-repeat: no-repeat;
 		background-size: cover;
 		object-fit: cover;
 		filter: brightness(0.5);
 		z-index: -1;
+
+		@apply max-md:bg-scroll bg-fixed;
 	}
 
 	.hero-header {
