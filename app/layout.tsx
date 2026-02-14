@@ -23,9 +23,9 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html className="h-full" lang="en">
+		<html lang="en">
 			<body
-				className={`${lato.variable} antialiased h-full relative overflow-x-hidden`}
+				className={`${lato.variable} antialiased relative overflow-x-hidden`}
 			>
 				<Navbar />
 				<main>{children}</main>
