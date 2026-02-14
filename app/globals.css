@@ -263,6 +263,7 @@
 		transition: all 0.2s;
 	}
 
+	.brand-link-container:active .brand-secondary-img,
 	.brand-link-container:focus .brand-secondary-img,
 	.brand-link-container:hover .brand-secondary-img {
 		opacity: 1; /* Show the secondary image on container focus/hover */
@@ -392,6 +393,34 @@
 		min-height: calc(100vh - var(--navbar-height));
 
 		@apply flex flex-col justify-start items-center mx-auto;
+
+		a {
+			@apply w-full;
+		}
+
+		img {
+			@apply mx-auto;
+		}
+
+		.regency-logo {
+			@apply bg-white w-full px-8 py-6;
+		}
+	}
+
+	.brand-image-examples-container {
+		@apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-8 w-full;
+
+		li {
+			@apply overflow-hidden;
+		}
+	}
+
+	.brand-image-examples-container li:hover a img {
+		@apply scale-105;
+	}
+
+	.mosmosh-image-3 {
+		transform: scaleX(-1);
 	}
 
 	footer {

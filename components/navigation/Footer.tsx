@@ -16,7 +16,7 @@ const Footer = () => {
 					<p>All Rights Reserved.</p>
 				</div>
 
-				<div className="border-white flex-1 flex justify-center items-center gap-4 max-md:py-2 max-md:border-b max-md:border-t md:border-l md:border-r ">
+				<div className="border-white flex-1 flex justify-center items-center gap-4 max-md:py-4 max-md:border-b max-md:border-t md:border-l md:border-r ">
 					<p className="font-bold">Follow Us:</p>
 					<Link
 						className="footer-icon focus:text-[#c32aa3] hover:text-[#c32aa3]"

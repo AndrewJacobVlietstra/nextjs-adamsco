@@ -1,4 +1,10 @@
 import BrandPage from "@/components/BrandPage";
+import { whiteStuffImageExamples } from "@/lib/constants";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "White Stuff - Adamsco Sales Agency",
+};
 
 const WhiteStuffPage = () => {
 	return (
@@ -10,7 +16,10 @@ const WhiteStuffPage = () => {
 			brandImageSrc="/images/white-stuff.jpg"
 			brandImageHeight={675}
 			brandImageWidth={1200}
-			className="max-w-300"
+			brandImageExamples={whiteStuffImageExamples}
+			brandImageExamplesHeight={1707}
+			brandImageExamplesWidth={1280}
+			className="max-w-301"
 		/>
 	);
 };

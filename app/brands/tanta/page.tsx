@@ -1,4 +1,10 @@
 import BrandPage from "@/components/BrandPage";
+import { tantaImageExamples } from "@/lib/constants";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Tantä - Adamsco Sales Agency",
+};
 
 const TantaPage = () => {
 	return (
@@ -10,7 +16,10 @@ const TantaPage = () => {
 			brandImageSrc="/images/brand-logo-7.webp"
 			brandImageHeight={254}
 			brandImageWidth={636}
-			className="max-w-200"
+			brandImageExamples={tantaImageExamples}
+			brandImageExamplesHeight={1349}
+			brandImageExamplesWidth={900}
+			className="max-w-250"
 		/>
 	);
 };

@@ -1,4 +1,10 @@
 import BrandPage from "@/components/BrandPage";
+import { mosmoshImageExamples } from "@/lib/constants";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Mos Mosh - Adamsco Sales Agency",
+};
 
 const MosmoshPage = () => {
 	return (
@@ -10,7 +16,10 @@ const MosmoshPage = () => {
 			brandImageSrc="/images/mos-mosh.webp"
 			brandImageHeight={579}
 			brandImageWidth={1054}
-			className="max-w-263.5"
+			brandImageExamples={mosmoshImageExamples}
+			brandImageExamplesHeight={853}
+			brandImageExamplesWidth={639}
+			className="max-w-6xl"
 		/>
 	);
 };

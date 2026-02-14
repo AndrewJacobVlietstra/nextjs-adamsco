@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import type { brandImageExamples } from "@/lib/types";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -11,18 +12,26 @@ type BrandPageProps = {
 	brandImageSrc: string;
 	brandImageHeight: number;
 	brandImageWidth: number;
+	brandImageExamples: brandImageExamples;
+	brandImageExamplesClassName?: string | string[];
+	brandImageExamplesHeight: number;
+	brandImageExamplesWidth: number;
 	className?: string | string[];
 };
 
 const BrandPage = ({
 	brandDescription,
+	brandIntro,
+	brandTitle,
 	brandImageClassName,
 	brandImageHref,
 	brandImageSrc,
 	brandImageHeight,
 	brandImageWidth,
-	brandIntro,
-	brandTitle,
+	brandImageExamples,
+	brandImageExamplesClassName,
+	brandImageExamplesHeight,
+	brandImageExamplesWidth,
 	className,
 }: BrandPageProps) => {
 	return (
@@ -38,7 +47,10 @@ const BrandPage = ({
 			>
 				<Image
 					alt={`${brandTitle} logo`}
-					className={cn("", brandImageClassName)}
+					className={cn(
+						`${brandTitle.toLowerCase().trim().replace(" ", "-")}-logo`,
+						brandImageClassName,
+					)}
 					src={brandImageSrc}
 					height={brandImageHeight}
 					width={brandImageWidth}
@@ -46,11 +58,35 @@ const BrandPage = ({
 			</Link>
 
 			<div className="flex flex-col gap-6 my-16 tracking-wider">
-				<p className="text-2xl font-bold leading-9">{brandIntro}</p>
-				<p className="text-foreground/70 leading-7">{brandDescription}</p>
+				<p className="md:text-2xl font-bold leading-9">{brandIntro}</p>
+				<p className="md:text-base text-foreground/70 leading-7">
+					{brandDescription}
+				</p>
 			</div>
 
-			<div className="my-16">Brand Images</div>
+			<ul className="brand-image-examples-container mb-16">
+				{brandImageExamples.map(({ alt, imgPath }) => (
+					<li key={alt}>
+						<Link
+							href={brandImageHref}
+							target="_blank"
+							title={`Visit ${brandTitle}'s website, opens in new tab.`}
+						>
+							<Image
+								alt={alt}
+								className={cn(
+									"object-cover transition-all duration-300",
+									brandImageExamplesClassName,
+									alt,
+								)}
+								src={imgPath}
+								height={brandImageExamplesHeight}
+								width={brandImageExamplesWidth}
+							/>
+						</Link>
+					</li>
+				))}
+			</ul>
 		</section>
 	);
 };

@@ -1,4 +1,10 @@
 import BrandPage from "@/components/BrandPage";
+import { saburoImageExamples } from "@/lib/constants";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Saburo - Adamsco Sales Agency",
+};
 
 const SaburoPage = () => {
 	return (
@@ -10,7 +16,11 @@ const SaburoPage = () => {
 			brandImageSrc="/images/saburo.webp"
 			brandImageHeight={1000}
 			brandImageWidth={1920}
-			className="max-w-300"
+			brandImageExamples={saburoImageExamples}
+			brandImageExamplesHeight={1350}
+			brandImageExamplesWidth={1080}
+			brandImageExamplesClassName="h-150"
+			className="max-w-325"
 		/>
 	);
 };

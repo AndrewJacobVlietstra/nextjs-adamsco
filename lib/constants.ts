@@ -1,3 +1,5 @@
+export const BASE_URL = "https://adamscosalesagency.com";
+
 export const links = [
 	{
 		href: "/",
@@ -122,4 +124,107 @@ export const brandLogos = [
 	},
 ];
 
-export const BASE_URL = "https://adamscosalesagency.com";
+export const fidelityImageExamples = [
+	{
+		alt: "fidelity-image-1",
+		imgPath: "/images/fidelity-page-1.webp",
+	},
+	{
+		alt: "fidelity-image-2",
+		imgPath: "/images/fidelity-page-2.webp",
+	},
+	{
+		alt: "fidelity-image-3",
+		imgPath: "/images/fidelity-page-3.webp",
+	},
+];
+
+export const masuttoImageExamples = [
+	{
+		alt: "masutto-image-1",
+		imgPath: "/images/masutto-page-1.webp",
+	},
+	{
+		alt: "masutto-image-2",
+		imgPath: "/images/masutto-page-2.webp",
+	},
+	{
+		alt: "masutto-image-3",
+		imgPath: "/images/masutto-page-3.webp",
+	},
+];
+
+export const mosmoshImageExamples = [
+	{
+		alt: "mosmosh-image-1",
+		imgPath: "/images/mosmosh-page-1.webp",
+	},
+	{
+		alt: "mosmosh-image-2",
+		imgPath: "/images/mosmosh-page-2.webp",
+	},
+	{
+		alt: "mosmosh-image-3",
+		imgPath: "/images/mosmosh-page-3.jpg",
+	},
+];
+
+export const regencyImageExamples = [
+	{
+		alt: "regency-image-1",
+		imgPath: "/images/regency-page-1.webp",
+	},
+	{
+		alt: "regency-image-2",
+		imgPath: "/images/regency-page-2.webp",
+	},
+	{
+		alt: "regency-image-3",
+		imgPath: "/images/regency-page-3.webp",
+	},
+];
+
+export const saburoImageExamples = [
+	{
+		alt: "saburo-image-1",
+		imgPath: "/images/saburo-page-1.webp",
+	},
+	{
+		alt: "saburo-image-2",
+		imgPath: "/images/saburo-page-2.webp",
+	},
+	{
+		alt: "saburo-image-3",
+		imgPath: "/images/saburo-page-3.webp",
+	},
+];
+
+export const tantaImageExamples = [
+	{
+		alt: "tanta-image-2",
+		imgPath: "/images/tanta-page-2.webp",
+	},
+	{
+		alt: "tanta-image-1",
+		imgPath: "/images/tanta-page-1.webp",
+	},
+	{
+		alt: "tanta-image-3",
+		imgPath: "/images/tanta-page-3.webp",
+	},
+];
+
+export const whiteStuffImageExamples = [
+	{
+		alt: "white-stuff-image-2",
+		imgPath: "/images/white-stuff-page-2.avif",
+	},
+	{
+		alt: "white-stuff-image-1",
+		imgPath: "/images/white-stuff-page-1.avif",
+	},
+	{
+		alt: "white-stuff-image-3",
+		imgPath: "/images/white-stuff-page-3.avif",
+	},
+];

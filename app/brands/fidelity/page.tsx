@@ -1,4 +1,10 @@
 import BrandPage from "@/components/BrandPage";
+import { fidelityImageExamples } from "@/lib/constants";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Fidelity - Adamsco Sales Agency",
+};
 
 const FidelityPage = () => {
 	return (
@@ -10,6 +16,9 @@ const FidelityPage = () => {
 			brandImageSrc="/images/fidelity.webp"
 			brandImageHeight={931}
 			brandImageWidth={2048}
+			brandImageExamples={fidelityImageExamples}
+			brandImageExamplesHeight={510}
+			brandImageExamplesWidth={340}
 			className="max-w-6xl"
 		/>
 	);

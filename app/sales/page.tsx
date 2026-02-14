@@ -1,3 +1,4 @@
+import Construction from "@/components/Construction";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,9 +13,7 @@ const SalesPage = () => {
 			</section>
 
 			<section className="salespage-content-container">
-				<p className="flex justify-center text-lg uppercase">
-					Sales Page In Progress!
-				</p>
+				<Construction />
 			</section>
 		</>
 	);
