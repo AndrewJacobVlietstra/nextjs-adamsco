@@ -24,10 +24,10 @@ const ContactForm = () => {
 		errorMessage: "",
 	});
 
-	const isNameEmpty = formData.name.length === 0;
-	const isEmailEmpty = formData.email.length === 0;
-	const isSubjectEmpty = formData.subject.length === 0;
-	const isMessageEmpty = formData.message.length === 0;
+	const isNameEmpty = formData?.name.length === 0;
+	const isEmailEmpty = formData?.email.length === 0;
+	const isSubjectEmpty = formData?.subject.length === 0;
+	const isMessageEmpty = formData?.message.length === 0;
 
 	const handleClearInputs = () => setFormData(formDataInitialState);
 
@@ -47,7 +47,7 @@ const ContactForm = () => {
 
 		// Get formData into object format to stringify and pass as JSON in fetch request
 		const formData = new FormData(e.target);
-		const data = Object.fromEntries(formData.entries());
+		const data = Object.fromEntries(formData?.entries());
 
 		// Simulate a delay
 		await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -97,7 +97,7 @@ const ContactForm = () => {
 					name="name"
 					title="Please fill out your name."
 					onChange={handleInputChange}
-					value={formData.name}
+					value={formData?.name}
 				/>
 				{isNameEmpty && <label htmlFor="name">Name</label>}
 			</div>
@@ -110,7 +110,7 @@ const ContactForm = () => {
 					name="email"
 					title="Please fill out your email."
 					onChange={handleInputChange}
-					value={formData.email}
+					value={formData?.email}
 				/>
 				{isEmailEmpty && <label htmlFor="email">Email</label>}
 			</div>
@@ -123,7 +123,7 @@ const ContactForm = () => {
 					name="subject"
 					title="Please fill out your subject."
 					onChange={handleInputChange}
-					value={formData.subject}
+					value={formData?.subject}
 				/>
 				{isSubjectEmpty && <label htmlFor="subject">Subject</label>}
 			</div>
@@ -136,7 +136,7 @@ const ContactForm = () => {
 					name="message"
 					title="Please fill out your message."
 					onChange={handleInputChange}
-					value={formData.message}
+					value={formData?.message}
 				/>
 				{isMessageEmpty && <label htmlFor="message">Message</label>}
 			</div>
@@ -149,7 +149,7 @@ const ContactForm = () => {
 
 			<div className="hidden">
 				<input type="hidden" name="_captcha" value="false" />
-				<input type="hidden" name="_subject" value={formData.subject} />
+				<input type="hidden" name="_subject" value={formData?.subject} />
 			</div>
 
 			<Button
