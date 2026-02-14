@@ -10,13 +10,14 @@ const NavLinks = () => {
 	return (
 		<>
 			{links.map(({ content, href }) => (
-				<Link
-					className={`${pathname === href ? "text-slate-400 brightness-120" : ""}`}
-					href={href}
-					key={content}
-				>
-					{content}
-				</Link>
+				<li key={content}>
+					<Link
+						className={`${pathname === href ? "text-slate-400 brightness-120" : ""}`}
+						href={href}
+					>
+						{content}
+					</Link>
+				</li>
 			))}
 		</>
 	);

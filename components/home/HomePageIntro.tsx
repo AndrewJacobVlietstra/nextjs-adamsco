@@ -9,7 +9,8 @@ const HomePageIntro = () => {
 				years of experience, proudly serving the Canadian market.{" "}
 				<Link
 					href={"/about-us"}
-					className="text-slate-400 active:brightness-120 focus:brightness-120 hover:brightness-120"
+					className="font-bold text-slate-400 focus:brightness-120 hover:brightness-120"
+					title="Learn more about us."
 				>
 					Learn&nbsp;more
 				</Link>

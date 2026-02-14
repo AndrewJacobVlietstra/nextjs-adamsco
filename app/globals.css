@@ -161,14 +161,26 @@
 			justify-content: center;
 			align-items: start;
 
+			opacity: 0;
+			visibility: hidden;
+
 			height: fit-content;
 			width: 0%;
 
 			@apply gap-0 bg-background;
 
-			a {
-				@apply border-b-0 uppercase w-full px-6 py-3 hover:bg-slate-900 active:bg-slate-900 focus:bg-slate-900;
+			li {
+				@apply h-full w-full;
 			}
+
+			a {
+				@apply block border-b-0 max-sm:px-6 px-8 py-3 hover:bg-slate-900 active:bg-slate-900 focus:bg-slate-900 uppercase;
+			}
+		}
+
+		.mobile-nav-dropdown--active {
+			opacity: 1;
+			visibility: visible;
 		}
 
 		.logo {
@@ -407,6 +419,10 @@
 		.regency-logo {
 			@apply bg-white w-full px-8 py-6;
 		}
+
+		.mosmosh-image-3 {
+			transform: scaleX(-1);
+		}
 	}
 
 	.brand-image-examples-container {
@@ -419,10 +435,6 @@
 
 	.brand-image-examples-container li:hover a img {
 		@apply scale-105;
-	}
-
-	.mosmosh-image-3 {
-		transform: scaleX(-1);
 	}
 
 	footer {

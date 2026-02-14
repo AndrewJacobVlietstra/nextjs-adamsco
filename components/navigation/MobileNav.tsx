@@ -18,6 +18,7 @@ export default function MobileNav({ children, className }: MobileNavProps) {
 	return (
 		<div className={cn("", className)} ref={mobileMenuRef}>
 			<Button
+				aria-label="Open Menu"
 				className="cursor-pointer"
 				onClick={() => setIsActive((prev) => !prev)}
 				variant={"outline"}
@@ -29,14 +30,12 @@ export default function MobileNav({ children, className }: MobileNavProps) {
 				)}
 			</Button>
 
-			{isActive ? (
-				<ul
-					className={`mobile-nav-dropdown ${isActive ? "animate-growIn" : ""}`}
-					onClick={() => setIsActive(false)}
-				>
-					{children}
-				</ul>
-			) : null}
+			<ul
+				className={`mobile-nav-dropdown ${isActive ? "animate-growIn mobile-nav-dropdown--active" : ""}`}
+				onClick={() => setIsActive(false)}
+			>
+				{children}
+			</ul>
 		</div>
 	);
 }

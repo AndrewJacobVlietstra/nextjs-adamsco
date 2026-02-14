@@ -106,7 +106,7 @@ export const brandLogos = [
 	},
 	{
 		href: "https://www.masutto.com/en-ca",
-		imgPath: "/images/brand-logo-5.webp",
+		imgPath: "/images/brand-logo-5-a.webp",
 		name: "masutto-brand-logo",
 		title: "Masutto",
 	},

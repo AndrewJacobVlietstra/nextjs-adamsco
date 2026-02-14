@@ -20,7 +20,12 @@ const BrandImage = ({
 	secondaryImg,
 }: BrandImageProps) => {
 	return (
-		<Link className={cn("brand-link-container", className)} href={href}>
+		<Link
+			aria-label={`About ${brandName} link`}
+			className={cn("brand-link-container", className)}
+			href={href}
+			title={`Learn more about ${brandName}`}
+		>
 			<div className="brand-image-container">
 				<Image
 					alt={name}
