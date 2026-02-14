@@ -1,9 +1,11 @@
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 
 type BrandImageProps = {
 	href: string;
 	brandName: string;
+	className: string | string[];
 	name: string;
 	primaryImg: string;
 	secondaryImg?: string;
@@ -12,12 +14,13 @@ type BrandImageProps = {
 const BrandImage = ({
 	href,
 	brandName,
+	className,
 	name,
 	primaryImg,
 	secondaryImg,
 }: BrandImageProps) => {
 	return (
-		<Link className="brand-link-container" href={href}>
+		<Link className={cn("brand-link-container", className)} href={href}>
 			<div className="brand-image-container">
 				<Image
 					alt={name}
