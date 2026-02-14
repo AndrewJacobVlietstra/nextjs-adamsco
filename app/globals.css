@@ -259,6 +259,7 @@
 		top: 0;
 		left: 0;
 		opacity: 0; /* Initially hide the secondary image */
+		visibility: hidden;
 		height: 100%; /* Secondary image height must equal primary image, prevents overlap  */
 		transition: all 0.2s;
 	}
@@ -267,6 +268,7 @@
 	.brand-link-container:focus .brand-secondary-img,
 	.brand-link-container:hover .brand-secondary-img {
 		opacity: 1; /* Show the secondary image on container focus/hover */
+		visibility: visible;
 	}
 
 	.white-stuff-brand-img {
