@@ -264,10 +264,12 @@
 		transition: all 0.2s;
 	}
 
-	.brand-link-container:focus .brand-secondary-img,
-	.brand-link-container:hover .brand-secondary-img {
-		opacity: 1; /* Show the secondary image on container focus/hover */
-		visibility: visible;
+	@media (pointer: fine) {
+		.brand-link-container:focus .brand-secondary-img,
+		.brand-link-container:hover .brand-secondary-img {
+			opacity: 1; /* Show the secondary image on container focus/hover */
+			visibility: visible;
+		}
 	}
 
 	.white-stuff-brand-img {
