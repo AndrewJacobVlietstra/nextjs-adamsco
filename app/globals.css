@@ -170,7 +170,7 @@
 			@apply gap-0 bg-background;
 
 			li {
-				@apply h-full w-full;
+				@apply relative h-full w-full;
 			}
 
 			a {
