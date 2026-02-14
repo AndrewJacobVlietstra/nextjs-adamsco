@@ -35,7 +35,6 @@ export default function MobileNav({ children, className }: MobileNavProps) {
 		<div className={cn("", className)} ref={mobileMenuRef}>
 			<Button
 				aria-label="Open Menu"
-				className="cursor-pointer"
 				onClick={() => setIsActive((prev) => !prev)}
 				variant={"outline"}
 			>

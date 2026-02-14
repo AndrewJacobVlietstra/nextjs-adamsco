@@ -20,6 +20,7 @@ const BrandsPage = () => {
 						.sort((a, b) => a.name.localeCompare(b.name))
 						.map(({ href, imgPath, name, title }) => (
 							<Link
+								aria-label={`Visit ${title} website link`}
 								className={`logo-link ${name}`}
 								href={href}
 								key={name}

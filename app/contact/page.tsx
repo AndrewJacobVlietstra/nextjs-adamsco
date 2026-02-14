@@ -18,6 +18,7 @@ const ContactPage = () => {
 				<ContactForm />
 
 				<Link
+					aria-label="Google maps location link"
 					href={
 						"https://www.google.com/maps/place/63+Wingold+Ave+Unit+117,+North+York,+ON+M6B+1P8/"
 					}

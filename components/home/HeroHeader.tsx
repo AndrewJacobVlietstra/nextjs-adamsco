@@ -22,7 +22,9 @@ const HeroHeader = ({ className }: HeroHeaderProps) => {
 			</div>
 
 			<Button asChild className="hero-btn pl-5" variant="outline">
-				<Link href={"/brands"}>View Brands</Link>
+				<Link aria-label="View brands link" href={"/brands"}>
+					View Brands
+				</Link>
 			</Button>
 		</div>
 	);

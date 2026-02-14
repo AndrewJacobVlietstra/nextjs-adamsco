@@ -41,6 +41,7 @@ const BrandPage = ({
 			</div>
 
 			<Link
+				aria-label={`Visit ${brandTitle} website link`}
 				href={brandImageHref}
 				target="_blank"
 				title={`Visit ${brandTitle}'s website, opens in new tab.`}
@@ -68,6 +69,7 @@ const BrandPage = ({
 				{brandImageExamples.map(({ alt, imgPath }) => (
 					<li key={alt}>
 						<Link
+							aria-label={`Visit ${brandTitle} website link`}
 							href={brandImageHref}
 							target="_blank"
 							title={`Visit ${brandTitle}'s website, opens in new tab.`}

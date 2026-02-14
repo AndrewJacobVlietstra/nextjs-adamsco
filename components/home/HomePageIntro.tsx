@@ -8,6 +8,7 @@ const HomePageIntro = () => {
 				A successful, family-owned fashion wholesale business, with over 40
 				years of experience, proudly serving the Canadian market.{" "}
 				<Link
+					aria-label="Learn More Link"
 					href={"/about-us"}
 					className="font-bold text-slate-400 focus:brightness-120 hover:brightness-120"
 					title="Learn more about us."

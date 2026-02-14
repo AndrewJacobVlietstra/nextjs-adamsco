@@ -12,6 +12,7 @@ const NavLinks = () => {
 			{links.map(({ content, href }) => (
 				<li key={content}>
 					<Link
+						aria-label={`${content} Link`}
 						className={`${pathname === href ? "text-slate-400 brightness-120" : ""}`}
 						href={href}
 					>

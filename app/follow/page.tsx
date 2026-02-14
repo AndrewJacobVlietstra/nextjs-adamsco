@@ -15,6 +15,7 @@ const FollowPage = () => {
 
 			<section className="followpage-content-container mb-12">
 				<Link
+					aria-label="Visit our instagram link"
 					className="followpage-image-container brightness-90"
 					href="https://www.instagram.com/adamscosalesagency/"
 					target="_blank"
