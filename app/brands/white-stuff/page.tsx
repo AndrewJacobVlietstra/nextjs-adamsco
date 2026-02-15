@@ -19,7 +19,7 @@ const WhiteStuffPage = () => {
 			brandImageExamples={whiteStuffImageExamples}
 			brandImageExamplesHeight={1707}
 			brandImageExamplesWidth={1280}
-			className="max-w-301"
+			className="max-w-300"
 		/>
 	);
 };

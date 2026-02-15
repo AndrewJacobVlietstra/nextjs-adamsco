@@ -48,7 +48,7 @@ export const useLocalStorage = <T>(
 export const usePreventScroll = (isActive: boolean) => {
 	// Prevent scrolling when mobile nav menu is active/visible
 	useEffect(() => {
-		const preventScrollClasses = ["h-full", "overflow-hidden"];
+		const preventScrollClasses = ["overflow-hidden"];
 
 		if (isActive) {
 			document.body.classList.add(...preventScrollClasses);

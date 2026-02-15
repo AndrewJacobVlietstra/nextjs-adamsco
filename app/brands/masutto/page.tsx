@@ -21,7 +21,7 @@ const MasuttoPage = () => {
 			brandImageExamplesHeight={608}
 			brandImageExamplesWidth={540}
 			brandImageExamplesClassName="w-135 h-152"
-			className="max-w-300"
+			className="max-w-6xl"
 		/>
 	);
 };
