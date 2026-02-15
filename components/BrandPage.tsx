@@ -42,6 +42,9 @@ const BrandPage = ({
 
 			<Link
 				aria-label={`Visit ${brandTitle} website link`}
+				className={cn(
+					`${brandTitle.toLowerCase().trim().replace(" ", "-")}-link`,
+				)}
 				href={brandImageHref}
 				target="_blank"
 				title={`Visit ${brandTitle}'s website, opens in new tab.`}
@@ -49,7 +52,7 @@ const BrandPage = ({
 				<Image
 					alt={`${brandTitle} logo`}
 					className={cn(
-						`${brandTitle.toLowerCase().trim().replace(" ", "-")}-logo`,
+						`${brandTitle.toLowerCase().trim().replace(" ", "-")}-image`,
 						brandImageClassName,
 					)}
 					src={brandImageSrc}

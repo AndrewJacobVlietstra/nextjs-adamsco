@@ -140,7 +140,7 @@
 		@apply glass rounded-none sticky top-0 z-10;
 
 		nav {
-			@apply h-(--navbar-height) flex flex-row justify-between mx-auto container sm:px-10 px-5 py-4;
+			@apply h-(--navbar-height) flex justify-between items-center mx-auto container sm:px-10 px-5 py-4;
 
 			ul {
 				@apply flex flex-row items-center gap-5;
@@ -149,6 +149,12 @@
 					@apply border-b border-transparent hover:border-slate-400 transition-colors duration-220;
 				}
 			}
+		}
+
+		.nav-logo-link:focus .nav-logo-image,
+		.nav-logo-link:hover .nav-logo-image {
+			filter: brightness(0) saturate(100%) invert(85%) sepia(11%) saturate(714%)
+				hue-rotate(181deg) brightness(92%) contrast(89%);
 		}
 
 		.mobile-nav-dropdown {
@@ -181,14 +187,6 @@
 		.mobile-nav-dropdown--active {
 			opacity: 1;
 			visibility: visible;
-		}
-
-		.logo {
-			@apply flex flex-row gap-3;
-
-			p {
-				@apply text-xl font-bold italic max-sm:hidden;
-			}
 		}
 	}
 
@@ -303,6 +301,7 @@
 		transition: all ease-in-out 0.25s;
 	}
 
+	.logo-link:focus img,
 	.logo-link:hover img {
 		transform: scale(0.9);
 	}
@@ -397,6 +396,18 @@
 		@apply text-center text-lg text-red-400;
 	}
 
+	.google-maps-link {
+		@apply overflow-hidden;
+	}
+	.google-maps-image {
+		@apply brightness-90 transition-transform duration-250;
+	}
+
+	.google-maps-link:focus .google-maps-image,
+	.google-maps-link:hover .google-maps-image {
+		@apply scale-108;
+	}
+
 	.thankyoupage-content-container {
 		min-height: calc(100vh - var(--navbar-height));
 
@@ -416,8 +427,11 @@
 			@apply mx-auto;
 		}
 
-		.regency-logo {
-			@apply bg-white w-full px-8 py-6;
+		.regency-link {
+			@apply bg-white w-full max-md:p-6 p-10;
+		}
+		.tantä-link {
+			@apply bg-white;
 		}
 
 		.mosmosh-image-3 {
@@ -433,7 +447,8 @@
 		}
 	}
 
-	.brand-image-examples-container li:hover a img {
+	.brand-image-examples-container li a:focus img,
+	.brand-image-examples-container li a:hover img {
 		@apply scale-105;
 	}
 

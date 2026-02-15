@@ -19,6 +19,7 @@ const ContactPage = () => {
 
 				<Link
 					aria-label="Google maps location link"
+					className="google-maps-link"
 					href={
 						"https://www.google.com/maps/place/63+Wingold+Ave+Unit+117,+North+York,+ON+M6B+1P8/"
 					}
@@ -27,7 +28,7 @@ const ContactPage = () => {
 				>
 					<Image
 						alt="adamsco google maps location"
-						className="brightness-90"
+						className="google-maps-image"
 						src={"/images/google-maps-location.png"}
 						height={728}
 						width={1689}

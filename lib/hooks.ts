@@ -44,3 +44,21 @@ export const useLocalStorage = <T>(
 
 	return [storedValue, setStoredValue] as const;
 };
+
+export const usePreventScroll = (isActive: boolean) => {
+	// Prevent scrolling when mobile nav menu is active/visible
+	useEffect(() => {
+		const preventScrollClasses = ["h-full", "overflow-hidden"];
+
+		if (isActive) {
+			document.body.classList.add(...preventScrollClasses);
+		} else {
+			document.body.classList.remove(...preventScrollClasses);
+		}
+
+		// Cleanup function to ensure the class is removed when the component unmounts
+		return () => {
+			document.body.classList.remove(...preventScrollClasses);
+		};
+	}, [isActive]);
+};

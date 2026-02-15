@@ -3,12 +3,10 @@ import Link from "next/link";
 
 const NavLogo = () => {
 	return (
-		<Link
-			className="logo rounded-4xl hover:bg-slate-700/80 transition-colors duration-200"
-			href={"/"}
-		>
+		<Link className="nav-logo-link rounded-lg" href={"/"}>
 			<Image
 				alt="logo"
+				className="nav-logo-image"
 				src={"/images/adamsco-logo-2.png"}
 				width={38}
 				height={38}
