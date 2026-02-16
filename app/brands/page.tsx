@@ -27,7 +27,13 @@ const BrandsPage = () => {
 								target="_blank"
 								title={`Visit ${title}'s website, opens in new tab.`}
 							>
-								<Image alt={name} src={imgPath} height={500} width={500} />
+								<Image
+									alt={name}
+									src={imgPath}
+									height={500}
+									width={500}
+									priority
+								/>
 							</Link>
 						))}
 				</div>

@@ -58,6 +58,7 @@ const BrandPage = ({
 					src={brandImageSrc}
 					height={brandImageHeight}
 					width={brandImageWidth}
+					priority
 				/>
 			</Link>
 
