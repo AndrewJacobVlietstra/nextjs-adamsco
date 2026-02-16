@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 
 const NavLinks = () => {
 	const pathname = usePathname();
+	const splitPath = pathname.split("/").slice(1);
 
 	return (
 		<>
@@ -13,7 +14,7 @@ const NavLinks = () => {
 				<li key={content}>
 					<Link
 						aria-label={`${content} Link`}
-						className={`${pathname === href ? "text-slate-400 brightness-120" : ""}`}
+						className={`${splitPath.includes(href.replace("/", "")) ? "text-slate-400 brightness-120" : ""}`}
 						href={href}
 					>
 						{content}
