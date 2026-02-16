@@ -149,7 +149,11 @@ const ContactForm = () => {
 
 			<div className="hidden">
 				<input type="hidden" name="_captcha" value="false" />
-				<input type="hidden" name="_subject" value={formData?.subject} />
+				<input
+					type="hidden"
+					name="_subject"
+					value={`${formData?.email} - ${formData?.subject}`}
+				/>
 			</div>
 
 			<Button
