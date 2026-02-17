@@ -18,8 +18,8 @@ const AboutPage = () => {
 						alt="about us image"
 						className="brightness-95"
 						src={"/images/about-us.jpg"}
-						height={720}
-						width={960}
+						height={800}
+						width={1152}
 					/>
 				</div>
 
