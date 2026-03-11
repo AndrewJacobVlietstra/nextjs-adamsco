@@ -11,7 +11,7 @@ const ContactPage = () => {
 	return (
 		<>
 			<section className="contactpage-intro-container my-(--section-spacing)">
-				<h1 className="flex justify-center">Contact Us</h1>
+				<h1 className="flex justify-center text-center">Contact Us</h1>
 			</section>
 
 			<section className="contactpage-content-container">

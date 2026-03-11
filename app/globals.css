@@ -369,7 +369,8 @@
 		@apply flex flex-col gap-14 mb-10;
 	}
 
-	.contact-form {
+	.contact-form,
+	.sales-form {
 		@apply flex flex-col gap-12 tracking-[0.08em];
 
 		div {
@@ -387,12 +388,15 @@
 	}
 
 	.contact-form input:focus + label,
-	.contact-form textarea:focus + label {
+	.contact-form textarea:focus + label,
+	.sales-form input:focus + label,
+	.sales-form textarea:focus + label {
 		opacity: 0;
 		transform: translate(2.5rem, 0rem);
 	}
 
-	.contact-form-error {
+	.contact-form-error,
+	.sales-form-error {
 		@apply text-center text-lg text-red-400;
 	}
 

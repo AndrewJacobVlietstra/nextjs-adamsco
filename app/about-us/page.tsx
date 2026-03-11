@@ -9,7 +9,7 @@ const AboutPage = () => {
 	return (
 		<>
 			<section className="aboutpage-intro-container my-(--section-spacing)">
-				<h1 className="flex justify-center">About Us</h1>
+				<h1 className="flex justify-center text-center">About Us</h1>
 			</section>
 
 			<section className="aboutpage-content-container mx-auto">

@@ -6,16 +6,15 @@ import { ChangeEvent, SubmitEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useLocalStorage } from "@/lib/hooks";
 
-const ContactForm = () => {
+const SalesForm = () => {
 	const router = useRouter();
 	const formDataInitialState = {
 		name: "",
 		email: "",
-		subject: "",
 		message: "",
 	};
 	const [formData, setFormData] = useLocalStorage(
-		"adamsco-contact-form-data",
+		"adamsco-sales-form-data",
 		formDataInitialState,
 	);
 	const [isPending, setIsPending] = useState(false);
@@ -26,7 +25,6 @@ const ContactForm = () => {
 
 	const isNameEmpty = formData?.name.length === 0;
 	const isEmailEmpty = formData?.email.length === 0;
-	const isSubjectEmpty = formData?.subject.length === 0;
 	const isMessageEmpty = formData?.message.length === 0;
 
 	const handleClearInputs = () => setFormData(formDataInitialState);
@@ -88,7 +86,7 @@ const ContactForm = () => {
 	};
 
 	return (
-		<form className="contact-form" onSubmit={handleFormSubmit}>
+		<form className="sales-form" onSubmit={handleFormSubmit}>
 			<div>
 				<input
 					required
@@ -118,20 +116,6 @@ const ContactForm = () => {
 			</div>
 
 			<div>
-				<input
-					required
-					type="text"
-					id="subject"
-					name="subject"
-					title="Please fill out your subject."
-					maxLength={80}
-					onChange={handleInputChange}
-					value={formData?.subject}
-				/>
-				{isSubjectEmpty && <label htmlFor="subject">Subject</label>}
-			</div>
-
-			<div>
 				<textarea
 					required
 					rows={6}
@@ -148,7 +132,7 @@ const ContactForm = () => {
 
 			{error.isError && (
 				<div>
-					<p className="contact-form-error">{error.errorMessage}</p>
+					<p className="sales-form-error">{error.errorMessage}</p>
 				</div>
 			)}
 
@@ -157,7 +141,7 @@ const ContactForm = () => {
 				<input
 					type="hidden"
 					name="_subject"
-					value={`Contact - ${formData?.email} - ${formData?.subject}`}
+					value={`Sample Sale - ${formData?.email}`}
 				/>
 			</div>
 
@@ -173,4 +157,4 @@ const ContactForm = () => {
 		</form>
 	);
 };
-export default ContactForm;
+export default SalesForm;

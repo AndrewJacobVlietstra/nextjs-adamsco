@@ -10,7 +10,7 @@ const FollowPage = () => {
 	return (
 		<>
 			<section className="followpage-intro-container my-(--section-spacing)">
-				<h1 className="flex justify-center">Follow Us</h1>
+				<h1 className="flex justify-center text-center">Follow Us</h1>
 			</section>
 
 			<section className="followpage-content-container mb-12">
