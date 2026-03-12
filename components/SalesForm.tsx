@@ -51,7 +51,7 @@ const SalesForm = () => {
 		await new Promise((resolve) => setTimeout(resolve, 1000));
 
 		// POST request to email handler site with formData
-		await fetch("https://formsubmit.co/ajax/adamscosalesagency@gmail.com", {
+		await fetch("https://formsubmit.co/ajax/c1f351d5f3e05ac30aafc917d994c434", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
