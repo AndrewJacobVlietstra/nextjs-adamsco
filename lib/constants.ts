@@ -49,13 +49,13 @@ export const brands = [
 		primaryImg: "/images/brand-3-a.webp",
 		secondaryImg: "/images/brand-3-b.webp",
 	},
-	{
-		href: "/brands/saburo",
-		brandName: "Saburo",
-		name: "saburo-brand-img",
-		primaryImg: "/images/brand-4-a.webp",
-		secondaryImg: "/images/brand-4-b.webp",
-	},
+	// {
+	// 	href: "/brands/saburo",
+	// 	brandName: "Saburo",
+	// 	name: "saburo-brand-img",
+	// 	primaryImg: "/images/brand-4-a.webp",
+	// 	secondaryImg: "/images/brand-4-b.webp",
+	// },
 	{
 		href: "/brands/masutto",
 		brandName: "Masutto",
@@ -70,12 +70,19 @@ export const brands = [
 		primaryImg: "/images/brand-6-a.webp",
 		secondaryImg: "/images/brand-6-b.webp",
 	},
+	// {
+	// 	href: "/brands/tanta",
+	// 	brandName: "Tantä",
+	// 	name: "tanta-brand-img",
+	// 	primaryImg: "/images/brand-7-a.webp",
+	// 	secondaryImg: "/images/brand-7-b.webp",
+	// },
 	{
-		href: "/brands/tanta",
-		brandName: "Tantä",
-		name: "tanta-brand-img",
-		primaryImg: "/images/brand-7-a.webp",
-		secondaryImg: "/images/brand-7-b.webp",
+		href: "/brands/thomas-maine",
+		brandName: "Thomas Maine",
+		name: "thomas-maine-brand-img",
+		primaryImg: "/images/brand-8-a.jpg",
+		secondaryImg: "/images/brand-8-b.jpg",
 	},
 ];
 
@@ -98,12 +105,12 @@ export const brandLogos = [
 		name: "mos-mosh-brand-logo",
 		title: "Mos Mosh",
 	},
-	{
-		href: "https://www.saburojeans.com/en-us",
-		imgPath: "/images/brand-logo-4.avif",
-		name: "saburo-jeans-brand-logo",
-		title: "Saburo",
-	},
+	// {
+	// 	href: "https://www.saburojeans.com/en-us",
+	// 	imgPath: "/images/brand-logo-4.avif",
+	// 	name: "saburo-jeans-brand-logo",
+	// 	title: "Saburo",
+	// },
 	{
 		href: "https://www.masutto.com/en-ca",
 		imgPath: "/images/brand-logo-5-a.webp",
@@ -116,11 +123,17 @@ export const brandLogos = [
 		name: "fidelity-brand-logo",
 		title: "Fidelity",
 	},
+	// {
+	// 	href: "https://tantarainwear.com/en",
+	// 	imgPath: "/images/brand-logo-7.webp",
+	// 	name: "tanta-brand-logo",
+	// 	title: "Tantä",
+	// },
 	{
-		href: "https://tantarainwear.com/en",
-		imgPath: "/images/brand-logo-7.webp",
-		name: "tanta-brand-logo",
-		title: "Tantä",
+		href: "https://thomasmaine.com/",
+		imgPath: "/images/brand-logo-8.svg",
+		name: "thomas-maine-brand-logo",
+		title: "Thomas Maine",
 	},
 ];
 
@@ -226,5 +239,20 @@ export const whiteStuffImageExamples = [
 	{
 		alt: "white-stuff-image-3",
 		imgPath: "/images/white-stuff-page-3.avif",
+	},
+];
+
+export const thomasMaineImageExamples = [
+	{
+		alt: "thomas-maine-image-1",
+		imgPath: "/images/thomas-maine-page-1.jpg",
+	},
+	{
+		alt: "thomas-maine-image-2",
+		imgPath: "/images/thomas-maine-page-2.jpg",
+	},
+	{
+		alt: "thomas-maine-image-3",
+		imgPath: "/images/thomas-maine-page-3.jpg",
 	},
 ];

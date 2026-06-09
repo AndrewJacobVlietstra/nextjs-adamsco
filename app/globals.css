@@ -281,9 +281,9 @@
 		}
 	}
 
-	.white-stuff-brand-img {
+	/* .white-stuff-brand-img {
 		@apply 2xl:col-start-2 2xl:col-end-3;
-	}
+	} */
 
 	.brandpage-logos-container {
 		min-height: calc(100vh - var(--navbar-height));
@@ -309,7 +309,9 @@
 	.fidelity-brand-logo img,
 	.mos-mosh-brand-logo img,
 	.saburo-jeans-brand-logo img,
-	.tanta-brand-logo img {
+	.tanta-brand-logo img,
+	.regency-brand-logo img,
+	.thomas-maine-brand-logo img {
 		@apply relative;
 	}
 
@@ -325,10 +327,16 @@
 	.tanta-brand-logo img {
 		@apply xl:top-3;
 	}
-
-	.white-stuff-brand-logo {
-		@apply xl:col-start-2 xl:col-end-3;
+	.regency-brand-logo img {
+		@apply xl:top-20;
 	}
+	.thomas-maine-brand-logo img {
+		@apply p-3 lg:top-20;
+	}
+
+	/* .white-stuff-brand-logo {
+		@apply xl:col-start-2 xl:col-end-3;
+	} */
 
 	.salespage-content-container {
 		min-height: calc(100vh - var(--navbar-height));
